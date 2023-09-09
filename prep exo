@@ -1,0 +1,40 @@
+
+
+db.createCollection("Category");
+
+db.createCollection("Ingredient");
+
+db.createCollection("Step");
+
+db.createCollection("Recipe");
+
+db.createCollection("RecipeIngredient");
+
+db.createCollection("RecipeStep");
+
+db.Category.insertMany([
+  { _id: 1, Name: 'Italian' },
+  { _id: 2, Name: 'Algerian' },
+  { _id: 3, Name: 'French' },
+  { _id: 4, Name: 'Ukrainian' },
+  { _id: 5, Name: 'Dessert' },
+  { _id: 6, Name: 'Side Dish' },
+]);
+
+db.Ingredient.insertMany([
+  { _id: 1, Name: 'Pasta' },
+  { _id: 2, Name: 'Couscous' },
+  { _id: 3, Name: 'Lettuce' },
+]);
+
+db.Step.insertMany([
+  { _id: 1, Description: 'Boil pasta until al dente.' },
+  { _id: 2, Description: 'Steam couscous until fluffy.' },
+  { _id: 3, Description: 'Wash and chop lettuce and tomatoes.' },
+]);
+
+db.Recipe.insertMany([
+  { _id: 1, Name: 'Italian Pasta', CategoryID: 1 },
+  { _id: 2, Name: 'Algerian Couscous', CategoryID: 2 },
+  { _id: 3, Name: 'French Salad', CategoryID: 3 },
+]);
